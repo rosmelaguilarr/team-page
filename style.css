@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    background-color: #fafafa;
+}
+.container{
+    width: 90%;
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+}
+.header{
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.tittle{
+    width: 40%;
+    font-family: 'PT Serif', serif; 
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.045em;
+}
+.copy{
+    width: 45%;
+}
+.copy__title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+    row-gap: 2rem;
+}
+.card{
+    position: relative;
+    flex: 25%;
+    transition: all .3s ease-in-out;
+    filter: grayscale(100%);
+    transform: scale(1);
+}
+.card:hover{
+    filter: initial;
+    transform: scale(1.005);
+
+}
+.gallery__picture{
+    max-width: 100%;
+    margin: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.gallery__img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery__name{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.card:nth-child(2){
+    margin-top: 6rem;
+}
+.card:nth-child(5){
+    margin-top: 6rem;
+}
+.assignment{
+    margin: 0;
+    width: 100%;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg) translate(100%, -120%);
+    transform-origin: top right;
+}
+.footer{
+    padding: 5rem 0 1rem;
+}
+
+.author, .author a{
+    color: #BDBDBD;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+    user-select: none;
+}
+
+/* media */
+@media screen and (max-width: 768px){
+    .container{
+        padding-right: .8rem;
+    }
+    .header{
+        padding: 2rem 0 2.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gallery{
+        gap: 4rem;
+    }
+    .card{
+        flex: 30%;
+    }
+    .tittle{
+        width: initial;
+        margin-bottom: .5rem;
+    }
+    .copy{
+        width: initial;
+    }
+    .copy__text{
+        font-size: 14px;
+    }
+    .gallery__name{
+        font-size: 14px;
+    }
+    .assignment{
+        font-size: 10px;
+    }
+    .card:nth-child(2){
+        margin-top:3rem;
+    }
+    .card:nth-child(5){
+        margin-top:0;
+    }
+    .card:nth-child(3){
+        margin-top: -3rem;
+    }
+    .card:nth-child(5){
+        margin-top: -3rem;
+    }  
+}
+
+@media screen and (max-width: 425px){
+    .gallery{
+        gap: 2.5rem;
+    }
+    .card{
+        flex: 30%;
+    }
+}
+
